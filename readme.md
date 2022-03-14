@@ -1,1 +1,1 @@
-Small step for funny lil coder
+Small step for puny lil coder
