@@ -554,6 +554,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin: 0.5rem;
 }
 
+.m-auto {
+  margin: auto;
+}
+
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -1767,8 +1771,16 @@ Ensure the default browser behavior of the `hidden` attribute.
     order: 3;
   }
 
+  .md\:col-span-2 {
+    grid-column: span 2 / span 2;
+  }
+
   .md\:mt-10 {
     margin-top: 2.5rem;
+  }
+
+  .md\:block {
+    display: block;
   }
 
   .md\:flex {
@@ -1816,6 +1828,10 @@ Ensure the default browser behavior of the `hidden` attribute.
     justify-content: flex-start;
   }
 
+  .md\:justify-around {
+    justify-content: space-around;
+  }
+
   .md\:self-start {
     align-self: flex-start;
   }
@@ -1826,6 +1842,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .md\:p-10 {
     padding: 2.5rem;
+  }
+
+  .md\:p-0 {
+    padding: 0px;
   }
 
   .md\:px-0 {
