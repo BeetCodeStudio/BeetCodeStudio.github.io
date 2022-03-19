@@ -32,23 +32,23 @@
                     <ul class="flex space-x-7">
                         <li>
                             <a href=""
-                                class="text-md font-semibold hover:text-slate-100 hover:border-b-4 hover:border-blue-300 text-slate-300">Home</a>
+                                class="text-md font-semibold hover:text-slate-100 text-slate-300">Home</a>
                         </li>
                         <li>
                             <a href=""
-                                class="text-md font-semibold hover:text-slate-100 hover:border-b-4 hover:border-blue-300 text-slate-300">Kabinet</a>
+                                class="text-md font-semibold hover:text-slate-100 text-slate-300">Kabinet</a>
                         </li>
                         <li>
                             <a href=""
-                                class="text-md font-semibold hover:text-slate-100 hover:border-b-4 hover:border-blue-300 text-slate-300">Beasiswa</a>
+                                class="text-md font-semibold hover:text-slate-100 text-slate-300">Beasiswa</a>
                         </li>
                         <li x-data="{open: false}" class="">
-                            <div class="relative flex items-center cursor-pointer text-sm font-medium">
+                            <div class="relative ">
                                 <button @click="open = !open"
-                                    class="text-md font-semibold hover:text-slate-100 hover:border-b-4 hover:border-blue-300 text-slate-300">Kegiatan</button>
+                                    class="text-md font-semibold hover:text-slate-100 text-slate-300">Kegiatan</button>
                                 <div class="origin-top-left absolute top-10 right-0 w-24 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none"
                                     x-show="open" x-cloak>
-                                    <div class="py-1">
+                                    <div class="">
                                         <a href="/upcoming-events"
                                             class="text-gray-700 hover:text-blue-800 block px-4 py-2 text-sm">Upcoming Events</a>
                                         <a href="/press-release" class="text-gray-700 hover:text-blue-800 block px-4 py-2 text-sm">Press
@@ -84,8 +84,17 @@
                 <li>
                     <a href="" class="text-sm font-medium hover:text-slate-300 text-slate-600 capitalize">Beasiswa</a>
                 </li>
-                <li>
-                    <a href="" class="text-sm font-medium hover:text-slate-300 text-slate-600 capitalize">kegiatan</a>
+                <li class="" x-data="{open : false}">
+                    <button @click="open = !open"  class="text-sm font-medium hover:text-slate-300 text-slate-600 capitalize">kegiatan</button>
+                    <div class=""
+                    x-show="open" x-cloak>
+                    <div class="">
+                        <a href="/upcoming-events"
+                            class="text-gray-700 hover:text-blue-800 block px-4 py-2 text-sm">Upcoming Events</a>
+                        <a href="/press-release" class="text-gray-700 hover:text-blue-800 block px-4 py-2 text-sm">Press
+                            Release</a>
+                    </div>
+                </div>
                 </li>
             </ul>
         </div>
