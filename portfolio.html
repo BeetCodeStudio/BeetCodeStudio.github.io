@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="scroll-smooth">
+<html>
 
 <head>
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -23,11 +23,9 @@
     <title>BitCode Studio</title>
 
     <!-- Style from css file -->
-    <link rel="stylesheet" href="app.css">
-
+    <script src="https://cdn.tailwindcss.com"></script>
 
     <!-- js scripts -->
-    <script src="https://www.w3schools.com/lib/w3.js"></script>
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
     <style>
@@ -66,7 +64,7 @@
 
 
                     </div>
-                
+
                     <button class="md:block hidden border border-gray-300 text-white py-2 p-5 rounded-2xl ml-5">
                         Contact Us
                     </button>
@@ -89,8 +87,8 @@
         <!-- Navigation Bar End -->
 
         <!-- section 1 -->
-        <div id="offer" class="container mx-auto pt-20 flex flex-col justify-start items-center" x-data="{ porto : true}">
-            <h2 class="text-4xl font-bold text-slate-100 capitalize">Our works</h2>
+        <div class="container mx-auto pt-20 flex flex-col items-center" x-data="{ porto : false }">
+            <h2 class=" text-4xl font-bold text-slate-100 capitalize">Our works</h2>
             <p class="py-5 w-3/5 text-center text-slate-400 capitalize">this is the showcase of our work and portfolio
             </p>
             <div class="flex gap-4">
@@ -98,36 +96,38 @@
                 <button @click="porto = false" class="border-2 border-pink-600 rounded-md px-3 py-2 text-white">Our
                     Works</button>
             </div>
-            <div x-show="porto" class="grid grid-cols-1 w-4/5 sm:grid-cols-3 gap-5 my-5">
+            <div  x-show="porto" class="grid grid-cols-1 md:grid-cols-3 gap-5 my-5">
                 <!-- porto 1 -->
                 <div
                     class="hover:duration-200 duration-200 hover:border-gray-100 text-slate-100 hover:shadow-xl bg-slate-800 rounded-md shadow-md border border-gray-300/25 flex flex-col justify-center items-center p-5">
-                   
+
                     <p class="text-2xl font-semibold text-pink-500 pt-2">Landing Page</p>
                     <p class="text-center text-md py-2 flex-1">Landing page for lms web</p>
-                    <a href="/porto.html" class="capitalize bg-pink-500 px-3 py-2 text-white rounded-md">View The website</a>
+                    <a href="/porto.html" class="capitalize bg-pink-500 px-3 py-2 text-white rounded-md">View The
+                        website</a>
                 </div>
                 <!-- porto 1 end -->
                 <!-- porto 2 -->
                 <div
                     class="hover:duration-200 duration-200 hover:border-gray-100 text-slate-100 hover:shadow-xl bg-slate-800 rounded-md shadow-md border border-gray-300/25 flex flex-col justify-center items-center p-5">
-                  
+
                     <p class="text-2xl font-semibold text-pink-500 pt-2">Landing Page</p>
                     <p class="text-center text-md py-2 flex-1">Landing page for company web profile</p>
-                    <a href="/porto2.html" class="capitalize bg-pink-500 px-3 py-2 text-white rounded-md">View The website</a>
+                    <a href="/porto2.html" class="capitalize bg-pink-500 px-3 py-2 text-white rounded-md">View The
+                        website</a>
                 </div>
                 <!-- porto 2 end -->
                 <!-- porto 3 -->
                 <div
                     class="hover:duration-200 duration-200 text-slate-100 hover:shadow-xl bg-slate-800 rounded-md shadow-md border hover:border-gray-100 border-gray-300/25 flex flex-col justify-center items-center p-5">
-                    
+
                     <p class="text-2xl font-semibold text-pink-500 pt-2">Coming Soon</p>
                     <p class="text-center text-md py-2 flex-1">Under Contstruction, will be available soon</p>
                     <a href="" class="capitalize">Not Availabel</a>
                 </div>
                 <!-- porto 3 end-->
             </div>
-            <div x-show="!porto" class="grid grid-cols-1 w-4/5 sm:grid-cols-3 gap-5 my-5">
+            <div x-show="!porto" class="grid grid-cols-1 sm:grid-cols-3 gap-5 my-5">
                 <!-- works 1 -->
                 <div
                     class="hover:duration-200 duration-200 hover:border-gray-100 text-slate-100 hover:shadow-xl bg-slate-800 rounded-md shadow-md border border-gray-300/25 flex flex-col justify-center items-center p-5">
@@ -147,25 +147,9 @@
         </div>
         <!-- section 1 end -->
 
-        <!-- section 2 -->
-
-        <!-- section 2 -->
-
-
-
-        <!-- porto -->
-
         <!-- button -->
 
-        <div id="myBtn" class="fixed hidden right-10 bottom-20">
-            <a href="#home"
-                class="duration-200 hover:duration-200 hover:bg-black hover:text-white rounded-full bg-white w-10 h-10 flex items-center justify-center shadow-lg">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
-                    stroke="currentColor" stroke-width="2">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 10l7-7m0 0l7 7m-7-7v18" />
-                </svg>
-            </a>
-        </div>
+       
         <!-- Footer -->
 
         <footer class="body-font bg-slate-900 text-white">
@@ -236,9 +220,7 @@
             }
         }
     </script>
-    <script>
-        w3.includeHTML();
-    </script>
+
 
     <!-- Costum Javascript -->
 
