@@ -12,13 +12,15 @@
 
 </head>
 
-<body class="antialiased bg-blue-100 text-black">
+<body class="antialiased bg-blue-300 text-black">
 
     <!-- Navigation Bar -->
-    <div class="fixed w-full top-0 z-10 bg-slate-100 shadow-2xl" x-data="{open : false}">
-        <header class="container mx-auto">
-            <nav class="px-5 py-3 flex justify-between items-center content-center ">
-                <div class="flex items-center">
+    <div class="fixed w-full top-0 z-10 shadow-2xl" x-data="{open : false, showBar : true}" :class="{ 'bg-blue-900 shadow transition duration-100' : showBar }" 
+    @scroll.window="showBar = (window.pageYOffset > 20) ? true : false">
+        <header class="container mx-auto" >
+            <nav class="px-5 py-3 flex justify-between items-center content-center "
+>
+                <div class="flex items-center text-white">
                     <img class="w-8 h-8" src="https://source.unsplash.com/random" alt="">
                     <div class="flex flex-col pl-3">
 
@@ -29,19 +31,23 @@
                 <div class="hidden md:block">
                     <ul class="flex space-x-7">
                         <li>
-                            <a href="" class="text-md font-semibold hover:text-slate-300 text-slate-600">Beranda</a>
+                            <a href="" class="text-md font-semibold hover:text-slate-100 hover:border-b-4 hover:border-blue-300 text-slate-300">Home</a>
                         </li>
                         <li>
-                            <a href="" class="text-md font-semibold hover:text-slate-300 text-slate-600">Kabinet</a>
+                            <a href="" class="text-md font-semibold hover:text-slate-100 hover:border-b-4 hover:border-blue-300 text-slate-300">Kabinet</a>
                         </li>
                         <li>
-                            <a href="#contact"
-                                class="text-md font-semibold hover:text-slate-300 text-slate-600">Kegiatan</a>
+                            <a href=""
+                                class="text-md font-semibold hover:text-slate-100 hover:border-b-4 hover:border-blue-300 text-slate-300">Beasiswa</a>
+                        </li>
+                        <li>
+                            <a href=""
+                                class="text-md font-semibold hover:text-slate-100 hover:border-b-4 hover:border-blue-300 text-slate-300">Kegiatan</a>
                         </li>
                     </ul>
                 </div>
                 <!-- button mobile black -->
-                <div class="block sm:hidden">
+                <div class="block md:hidden">
                     <button @click="open = !open" class="flex items-center justify-center text-black p-2 rounded-full">
                         <svg class="fill-current h-6 w-6" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                             <title>Menu</title>
@@ -54,16 +60,19 @@
 
             </nav>
         </header>
-        <div x-show="open" @click.outside="open = !open" class="w-full bg-black shadow-md px-10 py-5">
+        <div x-show="open" @click.outside="open = !open" class="w-full bg-white shadow-md px-10 py-5">
             <ul class="text-lg">
                 <li>
-                    <a href="#offer" class="text-sm font-semibold hover:text-slate-300 text-slate-600">Offer</a>
+                    <a href="" class="text-sm font-medium hover:text-slate-300 text-slate-600 capitalize">Beranda</a>
                 </li>
                 <li>
-                    <a href="#about" class="text-sm font-medium hover:text-slate-300 text-slate-600">About</a>
+                    <a href="" class="text-sm font-medium hover:text-slate-300 text-slate-600 capitalize">Kabinet</a>
                 </li>
                 <li>
-                    <a href="#contact" class="text-sm font-medium hover:text-slate-300 text-slate-600">Contact</a>
+                    <a href="" class="text-sm font-medium hover:text-slate-300 text-slate-600 capitalize">Beasiswa</a>
+                </li>
+                <li>
+                    <a href="" class="text-sm font-medium hover:text-slate-300 text-slate-600 capitalize">kegiatan</a>
                 </li>
             </ul>
         </div>
@@ -75,8 +84,8 @@
     <div class="h-[40rem] bg-cover" style="background-image: url('https://source.unsplash.com/random');">
         <div
             class="absolute top-0 left-0 h-[40rem] w-full flex flex-col items-center justify-center space-y-3 text-white text-center bg-slate-600/80">
-            <p class="text-5xl font-bold">HIMIP UNRI 2022</p>
-            <p class="text-3xl font-semibold">Kabinet Arus Balik</p>
+            <p class="text-5xl font-extrabold">HIMIP UNRI 2022</p>
+            <p class="text-3xl font-semibold">HIMIPCANDRADIMUKA</p>
         </div>
     </div>
     <!-- foto pengurus end -->
@@ -85,10 +94,13 @@
     <div class="container mx-auto py-20 flex flex-col">
         <div class="grid grid-cols-1 md:grid-cols-2">
             <div class="space-y-5 text-center md:text-left order-3 md:order-2">
-                <p class="text-xl uppercase font-semibold">Kabinet Lorem, ipsum dolor.</p>
-                <h2 class="text-5xl font-semibold">About<br>HIMIP UNRI 2022</h2>
-                <p class="text-slate-500 md:p-0 p-3">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat accusamus obcaecati voluptate placeat ad blanditiis officiis iusto rerum consequatur sapiente unde voluptatibus magnam numquam itaque cupiditate soluta error dolor, mollitia velit. Aliquid cum quisquam saepe facere excepturi odit adipisci perferendis!</p>
-               
+                <p class="text-xl uppercase font-semibold text-blue-900">HIMIPCANDRADIMUKA</p>
+                <h2 class="text-5xl font-bold">About<br>HIMIP UNRI 2022</h2>
+                <p class="text-slate-600 md:p-0 p-3">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat
+                    accusamus obcaecati voluptate placeat ad blanditiis officiis iusto rerum consequatur sapiente unde
+                    voluptatibus magnam numquam itaque cupiditate soluta error dolor, mollitia velit. Aliquid cum
+                    quisquam saepe facere excepturi odit adipisci perferendis!</p>
+
             </div>
             <div class="p-10 order-2">
                 <div class="bg-white w-full h-full shadow-md flex justify-center items-center">
@@ -110,20 +122,21 @@
     <!-- video end -->
     <!-- progja -->
     <div class="container mx-auto md:px-0 px-3 pt-20 flex flex-col py-10 space-y-5">
-        <h2 class="text-left w-full text-4xl font-bold text-slate-900 capitalize">Artikel Terbaru</h2>
+        <h2 class="text-left w-full text-4xl font-bold text-slate-900 capitalize">Recent Articles</h2>
 
         <section class="text-gray-600 body-font">
             <div class="container px-5 mx-auto">
                 <div class="flex flex-wrap">
 
+                   
+
                     <div class="p-4 lg:w-1/3">
                         <div
-                            class="h-full bg-white bg-opacity-75 px-8 pt-16 pb-24 rounded-lg overflow-hidden text-center relative">
-                            <h2 class="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">CATEGORY</h2>
-                            <h1 class="title-font sm:text-2xl text-xl font-medium text-gray-900 mb-3">Judul Artikel</h1>
-                            <p class="leading-relaxed mb-3">Photo booth fam kinfolk cold-pressed sriracha leggings
-                                jianbing microdosing tousled waistcoat.</p>
-                            <a class="text-indigo-500 inline-flex items-center">Learn More
+                            class="h-full bg-white bg-opacity-75 px-8 pt-16 pb-24 rounded-lg overflow-hidden text-center relative flex flex-col items-center">
+                            <h2 class="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">Goverment</h2>
+                            <h1 class="title-font flex-1 sm:text-2xl text-xl font-medium text-gray-900 mb-3 capitalize">Berbagai macam fakta unik seputar pemerintahan indonesia </h1>
+                            <p class="leading-relaxed mb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim ipsam aut laborum, eaque praesentium unde.</p>
+                            <a class="text-indigo-500 inline-flex items-center">Baca Selengkapnya
                                 <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"
                                     fill="none" stroke-linecap="round" stroke-linejoin="round">
                                     <path d="M5 12h14"></path>
@@ -134,11 +147,76 @@
                                 class="text-center mt-2 leading-none flex justify-center absolute bottom-0 left-0 w-full py-4">
                                 <span
                                     class="text-gray-400 mr-3 inline-flex items-center leading-none text-sm pr-3 py-1 border-r-2 border-gray-200">
+                                    
+                                    <svg class="w-4 h-4 mr-1" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                      </svg>Maret 12, 2022
+                                </span>
+                                <span class="text-gray-400 inline-flex items-center leading-none text-sm">
                                     <svg class="w-4 h-4 mr-1" stroke="currentColor" stroke-width="2" fill="none"
                                         stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
-                                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
-                                        <circle cx="12" cy="12" r="3"></circle>
-                                    </svg>1.2K
+                                        <path
+                                            d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z">
+                                        </path>
+                                    </svg>6
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-4 lg:w-1/3">
+                        <div
+                            class="h-full bg-white bg-opacity-75 px-8 pt-16 pb-24 rounded-lg overflow-hidden text-center relative flex flex-col items-center">
+                            <h2 class="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">Beasiswa</h2>
+                            <h1 class="title-font flex-1 sm:text-2xl text-xl font-medium text-gray-900 mb-3 capitalize">Informasi beasiswa pertamina afirmasi </h1>
+                            <p class="leading-relaxed mb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim ipsam aut laborum, eaque praesentium unde.</p>
+                            <a class="text-indigo-500 inline-flex items-center">Baca Selengkapnya
+                                <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"
+                                    fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M5 12h14"></path>
+                                    <path d="M12 5l7 7-7 7"></path>
+                                </svg>
+                            </a>
+                            <div
+                                class="text-center mt-2 leading-none flex justify-center absolute bottom-0 left-0 w-full py-4">
+                                <span
+                                    class="text-gray-400 mr-3 inline-flex items-center leading-none text-sm pr-3 py-1 border-r-2 border-gray-200">
+                                   
+                                    <svg class="w-4 h-4 mr-1" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                      </svg>Maret 12, 2022
+                                </span>
+                                <span class="text-gray-400 inline-flex items-center leading-none text-sm">
+                                    <svg class="w-4 h-4 mr-1" stroke="currentColor" stroke-width="2" fill="none"
+                                        stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                                        <path
+                                            d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z">
+                                        </path>
+                                    </svg>6
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-4 lg:w-1/3">
+                        <div
+                            class="h-full bg-white bg-opacity-75 px-8 pt-16 pb-24 rounded-lg overflow-hidden text-center relative flex flex-col items-center">
+                            <h2 class="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">Info Kegiatan</h2>
+                            <h1 class="title-font flex-1 sm:text-2xl text-xl font-medium text-gray-900 mb-3 capitalize">Badminton tournament </h1>
+                            <p class="leading-relaxed mb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim ipsam aut laborum, eaque praesentium unde.</p>
+                            <a class="text-indigo-500 inline-flex items-center">Baca Selengkapnya
+                                <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"
+                                    fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M5 12h14"></path>
+                                    <path d="M12 5l7 7-7 7"></path>
+                                </svg>
+                            </a>
+                            <div
+                                class="text-center mt-2 leading-none flex justify-center absolute bottom-0 left-0 w-full py-4">
+                                <span
+                                    class="text-gray-400 mr-3 inline-flex items-center leading-none text-sm pr-3 py-1 border-r-2 border-gray-200">
+                                    <svg class="w-4 h-4 mr-1" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                      </svg>
+                                    Maret 12, 2022
                                 </span>
                                 <span class="text-gray-400 inline-flex items-center leading-none text-sm">
                                     <svg class="w-4 h-4 mr-1" stroke="currentColor" stroke-width="2" fill="none"
@@ -152,79 +230,7 @@
                         </div>
                     </div>
 
-                    <div class="p-4 lg:w-1/3">
-                        <div
-                            class="h-full bg-white bg-opacity-75 px-8 pt-16 pb-24 rounded-lg overflow-hidden text-center relative">
-                            <h2 class="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">CATEGORY</h2>
-                            <h1 class="title-font sm:text-2xl text-xl font-medium text-gray-900 mb-3">Ennui Snackwave
-                                Thundercats</h1>
-                            <p class="leading-relaxed mb-3">Photo booth fam kinfolk cold-pressed sriracha leggings
-                                jianbing microdosing tousled waistcoat.</p>
-                            <a class="text-indigo-500 inline-flex items-center">Learn More
-                                <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"
-                                    fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M5 12h14"></path>
-                                    <path d="M12 5l7 7-7 7"></path>
-                                </svg>
-                            </a>
-                            <div
-                                class="text-center mt-2 leading-none flex justify-center absolute bottom-0 left-0 w-full py-4">
-                                <span
-                                    class="text-gray-400 mr-3 inline-flex items-center leading-none text-sm pr-3 py-1 border-r-2 border-gray-200">
-                                    <svg class="w-4 h-4 mr-1" stroke="currentColor" stroke-width="2" fill="none"
-                                        stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
-                                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
-                                        <circle cx="12" cy="12" r="3"></circle>
-                                    </svg>1.2K
-                                </span>
-                                <span class="text-gray-400 inline-flex items-center leading-none text-sm">
-                                    <svg class="w-4 h-4 mr-1" stroke="currentColor" stroke-width="2" fill="none"
-                                        stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
-                                        <path
-                                            d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z">
-                                        </path>
-                                    </svg>6
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="p-4 lg:w-1/3">
-                        <div
-                            class="h-full bg-white bg-opacity-75 px-8 pt-16 pb-24 rounded-lg overflow-hidden text-center relative">
-                            <h2 class="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">CATEGORY</h2>
-                            <h1 class="title-font sm:text-2xl text-xl font-medium text-gray-900 mb-3">Selvage Poke
-                                Waistcoat Godard</h1>
-                            <p class="leading-relaxed mb-3">Photo booth fam kinfolk cold-pressed sriracha leggings
-                                jianbing microdosing tousled waistcoat.</p>
-                            <a class="text-indigo-500 inline-flex items-center">Learn More
-                                <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"
-                                    fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M5 12h14"></path>
-                                    <path d="M12 5l7 7-7 7"></path>
-                                </svg>
-                            </a>
-                            <div
-                                class="text-center mt-2 leading-none flex justify-center absolute bottom-0 left-0 w-full py-4">
-                                <span
-                                    class="text-gray-400 mr-3 inline-flex items-center leading-none text-sm pr-3 py-1 border-r-2 border-gray-200">
-                                    <svg class="w-4 h-4 mr-1" stroke="currentColor" stroke-width="2" fill="none"
-                                        stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
-                                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
-                                        <circle cx="12" cy="12" r="3"></circle>
-                                    </svg>1.2K
-                                </span>
-                                <span class="text-gray-400 inline-flex items-center leading-none text-sm">
-                                    <svg class="w-4 h-4 mr-1" stroke="currentColor" stroke-width="2" fill="none"
-                                        stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
-                                        <path
-                                            d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z">
-                                        </path>
-                                    </svg>6
-                                </span>
-                            </div>
-                        </div>
-                    </div>
+                
                 </div>
             </div>
         </section>
@@ -233,7 +239,8 @@
 
     <!-- spotify -->
     <div class="container mx-auto px-5 md:px-0">
-        <iframe src="https://open.spotify.com/embed-podcast/episode/06kX4u0WKge8I7fcUNkj7f" width="100%" height="232" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>    </div>
+        <iframe src="https://open.spotify.com/embed-podcast/episode/06kX4u0WKge8I7fcUNkj7f" width="100%" height="232"
+            frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe> </div>
     <!-- spotify end -->
 
     <!-- contact us -->
@@ -302,7 +309,11 @@
                     <p>Line </p>
                 </a>
                 <a href="https://vt.tiktok.com/ZSdR4kGop/" class="flex items-center gap-5">
-                    <svg class="h-8 w-8" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>TikTok</title><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
+                    <svg class="h-8 w-8" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <title>TikTok</title>
+                        <path
+                            d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z" />
+                    </svg>
                     <p>himipunri</p>
                 </a>
 
@@ -318,10 +329,13 @@
     <!-- Footer -->
 
     <footer class="body-font bg-slate-900 text-white">
-        <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
+        <div class="container px-5 py-8 mx-auto flex justify-between sm:flex-row flex-col">
 
             <p class="text-sm text-gray-500 sm:py-2 sm:mt-0 mt-4">©
-                2022 HIMIP UNRI || Beatcode Studio
+                2022 HIMIP UNRI
+            </p>
+            <p class="text-sm text-gray-500 sm:py-2 sm:mt-0 mt-4">
+                <a href="beetcodestudio.github.io">POWERED BY BEETCODESTUDIO</a>
             </p>
             <!-- <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
                 <a class="text-gray-500">
