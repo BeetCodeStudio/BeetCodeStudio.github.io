@@ -506,6 +506,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   position: fixed;
 }
 
+.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+}
+
 .top-0 {
   top: 0px;
 }
