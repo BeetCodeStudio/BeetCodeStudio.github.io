@@ -72,13 +72,16 @@
         <div x-show="open" @click.outside="open = !open" class="w-full bg-blue-700 shadow-md px-10 py-5">
             <ul class="text-lg space-y-3">
                 <li class="flex">
-                    <a href="" class="w-full py-2 px-2 bg-white/20 text-sm font-semibold hover:text-slate-100 text-slate-200 capitalize">Beranda</a>
+                    <a href=""
+                        class="w-full py-2 px-2 bg-white/20 text-sm font-semibold hover:text-slate-100 text-slate-200 capitalize">Beranda</a>
                 </li>
                 <li class="flex">
-                    <a href="" class="w-full py-2 px-2 bg-white/20 text-sm font-semibold hover:text-slate-100 text-slate-200 capitalize">Kabinet</a>
+                    <a href=""
+                        class="w-full py-2 px-2 bg-white/20 text-sm font-semibold hover:text-slate-100 text-slate-200 capitalize">Kabinet</a>
                 </li>
                 <li class="flex">
-                    <a href="" class="w-full py-2 px-2 bg-white/20 text-sm font-semibold hover:text-slate-100 text-slate-200 capitalize">Beasiswa</a>
+                    <a href=""
+                        class="w-full py-2 px-2 bg-white/20 text-sm font-semibold hover:text-slate-100 text-slate-200 capitalize">Beasiswa</a>
                 </li>
                 <li class="" x-data="{open : false}">
                     <button @click="open = !open"
@@ -155,49 +158,68 @@
                 <img class="w-full h-96 bg-cover" src="https://source.unsplash.com/random" alt="">
             </div>
             <div
-                class="bg-blue-600 p-10 rounded-b-md md:rounded-none md:rounded-r-md shadow-md text-white flex flex-col space-y-6 justify-center text-center md:text-left w-full font-semibold">
+                class="bg-blue-600 p-10 rounded-b-md md:rounded-none md:rounded-r-md shadow-md text-white flex flex-col space-y-3 justify-center text-center md:text-left w-full font-semibold">
                 <!-- <p class="uppercase font-semibold text-green-700">Upcoming Events</p> -->
-                <h1 class="text-3xl font-bold capitalize">
+                <h2 class="tracking-widest text-xs title-font font-medium text-gray-200 mb-1">Upcoming Event</h2>
+
+                <h2 class="text-2xl font-semibold capitalize">
                     Kelas jurnalistik tingkat dasar
-                </h1>
-                <p class="text-md">
-                    "Menumbuhkan semangat jurnalis yang akurat dan anti hoax"
+                </h2>
+                <p class="font-normal leading-relaxed">
+                    <p>
+                        "Menumbuhkan semangat jurnalis yang akurat dan anti hoax"
+                    </p>
+                    <ul class="">
+                        <li>
+                            🗓️ Hari/ tanggal : Minggu/ 20 Maret 2022
+                        </li>
+                        <li>
+                            🕘 Waktu : 09.00 WIB s.d. Selesai
+                        </li>
+                        <li>
+                            🌐 Tempat : Via Zoom Cloud Meeting
+                        </li>
+                        <li>
+                            🗣️ Pemateri : Febrina Wulandari
+                        </li>
+                    </ul>
+                </p>
+                <a href=""
+                class="text-slate-200 hover:text-blue-900 inline-flex justify-center md:justify-start items-center">Read
+                More
+                <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M5 12h14"></path>
+                    <path d="M12 5l7 7-7 7"></path>
+                </svg>
+            </a>
+            <div class="text-center mt-2 leading-none flex justify-center w-full py-4">
+                <span
+                    class="text-gray-100 mr-3 inline-flex items-center leading-none text-sm pr-3 py-1 border-r-2 border-gray-200">
 
-                </p>
-                <p class="text-md">
-                    🗓️ Hari/ tanggal : Minggu/ 20 Maret 2022
-
-                </p>
-                <p class="text-md">
-                    🕘 Waktu : 09.00 WIB s.d. Selesai
-
-                </p>
-                <p class="text-md">
-                    🌐 Tempat : Via Zoom Cloud Meeting
-                </p>
-                <p class="text-md">
-                    🗣️ Pemateri : Febrina Wulandari
-                </p>
-                <!-- download on -->
-                <button
-                    class="self-center md:self-start flex items-center border-2 border-white bg-white/40 hover:bg-white/60 text-blue-800 font-semibold py-2 px-5 rounded-md">
-                    Read More
-                    <!-- left svg -->
-                    <div
-                        class="bg-white shadow-md text-blue-700 rounded-full p-1 w-7 h-7 ml-2 flex justify-center items-center">
-                        <svg class="w-5 h-5" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
-                            viewBox="0 0 24 24" stroke="currentColor">
-                            <path d="M9 5l7 7-7 7"></path>
-                        </svg>
-                    </div>
-                </button>
+                    <svg class="w-4 h-4 mr-1" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                    </svg>Maret 12, 2022
+                </span>
+                <span class="text-gray-100 inline-flex items-center leading-none text-sm">
+                    <svg class="w-4 h-4 mr-1" stroke="currentColor" stroke-width="2" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                        <path
+                            d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z">
+                        </path>
+                    </svg>6
+                </span>
+            </div>
 
             </div>
         </div>
 
     </section>
     <section class="container mx-auto flex flex-col items-center text-center py-5">
-        <h2 class="text-center md:text-left w-full text-4xl font-bold text-slate-900 capitalize pb-10">Press Release</h2>
+        <h2 class="text-center md:text-left w-full text-4xl font-bold text-slate-900 capitalize pb-10">Press Release
+        </h2>
 
         <div class="grid grid-cols-1 md:px-0 px-5 md:grid-cols-2">
 
@@ -205,31 +227,47 @@
                 <img class="w-full h-96 bg-cover" src="https://source.unsplash.com/random/1" alt="">
             </div>
             <div
-                class="bg-blue-600 p-10 rounded-b-md md:rounded-none md:rounded-r-md shadow-md text-white flex flex-col space-y-6 justify-center text-center md:text-left w-full font-semibold">
+                class="bg-blue-600 p-10 rounded-b-md md:rounded-none md:rounded-r-md shadow-md text-slate-50 flex flex-col space-y-3 justify-center text-center md:text-left w-full font-semibold">
                 <!-- <p class="uppercase font-semibold text-green-700">Upcoming Events</p> -->
-                <h1 class="text-3xl font-bold capitalize">
+                <h2 class="tracking-widest text-xs title-font font-medium text-gray-200 mb-1">Press Release</h2>
+                <h1 class="text-2xl title-font font-semibold capitalize">
                     kegiatan Sekolah Advokasi
                 </h1>
-                <p class="text-md">
+                <p class=" font-normal leading-relaxed">
                     Pekanbaru (18/03/2022)- Pada 13 Maret 2022 yang lalu Dinas Advokesma Himip Candradimuka mengadakan
                     kegiatan Sekolah Advokasi dengan bertemakan “Mewujudkan Kader yang Analitis, Kritis dan Progresif
                     dalam Meningkatkan Kesejahteraan Mahasiswa Ilmu Pemerintahan” bertempat di Auditorium Drs. Sutan
                     Balia FISIP UNRI pukul 09.00 WIB s.d. Selesai.
                 </p>
 
-                <!-- download on -->
-                <button
-                    class="self-center md:self-start flex items-center border-2 border-white bg-white/40 hover:bg-white/60 text-blue-800 font-semibold py-2 px-5 rounded-md">
-                    Read More
-                    <!-- left svg -->
-                    <div
-                        class="bg-white shadow-md text-blue-700 rounded-full p-1 w-7 h-7 ml-2 flex justify-center items-center">
-                        <svg class="w-5 h-5" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
-                            viewBox="0 0 24 24" stroke="currentColor">
-                            <path d="M9 5l7 7-7 7"></path>
-                        </svg>
-                    </div>
-                </button>
+                <a href=""
+                    class="text-slate-200 hover:text-blue-900 inline-flex justify-center md:justify-start items-center">Read
+                    More
+                    <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M5 12h14"></path>
+                        <path d="M12 5l7 7-7 7"></path>
+                    </svg>
+                </a>
+                <div class="text-center mt-2 leading-none flex justify-center w-full py-4">
+                    <span
+                        class="text-gray-100 mr-3 inline-flex items-center leading-none text-sm pr-3 py-1 border-r-2 border-gray-200">
+
+                        <svg class="w-4 h-4 mr-1" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                        </svg>Maret 12, 2022
+                    </span>
+                    <span class="text-gray-100 inline-flex items-center leading-none text-sm">
+                        <svg class="w-4 h-4 mr-1" stroke="currentColor" stroke-width="2" fill="none"
+                            stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                            <path
+                                d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z">
+                            </path>
+                        </svg>6
+                    </span>
+                </div>
 
             </div>
         </div>
@@ -250,7 +288,7 @@
                                 Berbagai macam fakta unik seputar pemerintahan indonesia </h1>
                             <p class="leading-relaxed mb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit.
                                 Enim ipsam aut laborum, eaque praesentium unde.</p>
-                            <a class="text-indigo-500 inline-flex items-center">Baca Read More
+                            <a class="text-indigo-500 inline-flex items-center">Read More
                                 <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"
                                     fill="none" stroke-linecap="round" stroke-linejoin="round">
                                     <path d="M5 12h14"></path>
@@ -287,7 +325,7 @@
                                 Informasi beasiswa pertamina afirmasi </h1>
                             <p class="leading-relaxed mb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit.
                                 Enim ipsam aut laborum, eaque praesentium unde.</p>
-                            <a class="text-indigo-500 inline-flex items-center">Baca Read More
+                            <a class="text-indigo-500 inline-flex items-center">Read More
                                 <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"
                                     fill="none" stroke-linecap="round" stroke-linejoin="round">
                                     <path d="M5 12h14"></path>
@@ -325,7 +363,7 @@
                                 Badminton tournament </h1>
                             <p class="leading-relaxed mb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit.
                                 Enim ipsam aut laborum, eaque praesentium unde.</p>
-                            <a class="text-indigo-500 inline-flex items-center">Baca Read More
+                            <a class="text-indigo-500 inline-flex items-center">Read More
                                 <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"
                                     fill="none" stroke-linecap="round" stroke-linejoin="round">
                                     <path d="M5 12h14"></path>
