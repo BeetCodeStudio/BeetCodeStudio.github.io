@@ -1190,13 +1190,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 5rem;
 }
 
-<<<<<<< HEAD
 .h-60 {
   height: 15rem;
 }
 
-=======
->>>>>>> 4158b1fc68adb26eb97e69f8ff54894d7a1758e7
 .w-full {
   width: 100%;
 }
@@ -1221,7 +1218,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 2rem;
 }
 
-<<<<<<< HEAD
 .w-40 {
   width: 10rem;
 }
@@ -1230,8 +1226,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 9rem;
 }
 
-=======
->>>>>>> 4158b1fc68adb26eb97e69f8ff54894d7a1758e7
 .w-96 {
   width: 24rem;
 }
@@ -1270,23 +1264,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 0.25rem;
 }
 
-<<<<<<< HEAD
-.w-auto {
-  width: auto;
-}
-
 .w-32 {
   width: 8rem;
 }
 
-=======
->>>>>>> 4158b1fc68adb26eb97e69f8ff54894d7a1758e7
 .flex-1 {
   flex: 1 1 0%;
-}
-
-.flex-grow {
-  flex-grow: 1;
 }
 
 .origin-top-left {
@@ -1546,13 +1529,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 .bg-slate-900 {
   --tw-bg-opacity: 1;
   background-color: rgb(15 23 42 / var(--tw-bg-opacity));
-<<<<<<< HEAD
 }
 
 .bg-transparent {
   background-color: transparent;
-=======
->>>>>>> 4158b1fc68adb26eb97e69f8ff54894d7a1758e7
 }
 
 .bg-pink-700 {
@@ -1802,10 +1782,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-bottom: 2rem;
 }
 
-.pt-1 {
-  padding-top: 0.25rem;
-}
-
 .text-left {
   text-align: left;
 }
@@ -2010,14 +1986,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 .text-pink-700 {
-<<<<<<< HEAD
-=======
-  --tw-text-opacity: 1;
-  color: rgb(190 24 93 / var(--tw-text-opacity));
-}
-
-.text-pink-600 {
->>>>>>> 4158b1fc68adb26eb97e69f8ff54894d7a1758e7
   --tw-text-opacity: 1;
   color: rgb(190 24 93 / var(--tw-text-opacity));
 }
@@ -2375,31 +2343,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   .md\:px-0 {
     padding-left: 0px;
     padding-right: 0px;
-  }
-
-  .md\:py-10 {
-    padding-top: 2.5rem;
-    padding-bottom: 2.5rem;
-  }
-
-  .md\:py-14 {
-    padding-top: 3.5rem;
-    padding-bottom: 3.5rem;
-  }
-
-  .md\:py-1 {
-    padding-top: 0.25rem;
-    padding-bottom: 0.25rem;
-  }
-
-  .md\:py-16 {
-    padding-top: 4rem;
-    padding-bottom: 4rem;
-  }
-
-  .md\:py-20 {
-    padding-top: 5rem;
-    padding-bottom: 5rem;
   }
 
   .md\:text-left {
