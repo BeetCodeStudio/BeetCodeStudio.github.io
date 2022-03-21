@@ -1,0 +1,477 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Style from css file -->
+    <link rel="stylesheet" href="app.css">
+
+    <!-- js scripts -->
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+</head>
+
+<body class="antialiased bg-blue-300 text-slate-800">
+
+    <!-- Navigation Bar -->
+    <div class="sticky w-full top-0 z-10 shadow-2xl" x-data="{open : false, showBar : true}"
+        :class="{ 'bg-blue-800 shadow transition duration-100' : showBar }">
+        <header class="container mx-auto">
+            <nav class="px-5 py-3 flex justify-between items-center content-center ">
+                <a href="/himipmedia.html" class="flex gap-3">
+                    <img src="AllLogo.png" class="h-10 w-full" alt="">
+                </a>
+                <div class="hidden md:block">
+                    <ul class="flex space-x-7">
+                        <li>
+                            <a href="" class="text-md font-semibold hover:text-slate-100 text-slate-300">Home</a>
+                        </li>
+
+                        <li x-data="{open: false}" class="" @mouseover="open = true" @mouseover.away="open = false">
+                            <div class="relative ">
+                                <button @click="open = !open"
+                                    class="text-md font-semibold hover:text-slate-100 text-slate-300 flex gap-2 justify-center items-center">Profil
+                                    Jurusan<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20"
+                                        fill="currentColor">
+                                        <path fill-rule="evenodd"
+                                            d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                            clip-rule="evenodd" />
+                                    </svg></button>
+                                <div class="origin-top-left absolute top-6 left-0 w-40 " x-show="open" x-cloak>
+                                    <div class="h-3 bg-transparent">
+                                    </div>
+                                    <div
+                                        class="rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none">
+                                        <a href="/upcoming-events"
+                                            class="text-gray-700 hover:text-blue-800 block px-4 py-2 text-sm">Sambutan
+                                            Ketua Jurusan</a>
+                                        <a href="/press-release"
+                                            class="text-gray-700 hover:text-blue-800 block px-4 py-2 text-sm">Sejarah
+                                            dan Visi Misi Jurusan</a>
+                                        <a href="/press-release"
+                                            class="text-gray-700 hover:text-blue-800 block px-4 py-2 text-sm">Profil
+                                            Dosen</a>
+                                        <a href="/press-release"
+                                            class="text-gray-700 hover:text-blue-800 block px-4 py-2 text-sm">Kurikulum</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li x-data="{open: false}" class="" @mouseover="open = true" @mouseover.away="open = false">
+                            <div class="relative ">
+                                <button @click="open = !open"
+                                    class="text-md font-semibold hover:text-slate-100 text-slate-300 flex gap-2 justify-center items-center">Profil
+                                    HIMIP
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20"
+                                        fill="currentColor">
+                                        <path fill-rule="evenodd"
+                                            d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                            clip-rule="evenodd" />
+                                    </svg>
+                                </button>
+                                <div class="origin-top-left absolute top-6 left-0 w-40" x-show="open" x-cloak>
+                                    <div class="h-3 bg-transparent">
+                                    </div>
+                                    <div
+                                        class=" rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none">
+                                        <a href="/sambutan.html"
+                                            class="text-gray-700 hover:text-blue-800 block px-4 py-2 text-sm">Sambutan
+                                            Bupati HIMIP</a>
+                                        <a href="/press-release"
+                                            class="text-gray-700 hover:text-blue-800 block px-4 py-2 text-sm">Visi
+                                            Misi</a>
+                                        <a href="/press-release"
+                                            class="text-gray-700 hover:text-blue-800 block px-4 py-2 text-sm">Struktur
+                                            HIMIP</a>
+                                        <a href="/press-release"
+                                            class="text-gray-700 hover:text-blue-800 block px-4 py-2 text-sm">Leadership
+                                            Insight</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="" class="text-md font-semibold hover:text-slate-100 text-slate-300">Dinding Kreatif
+                                Mahasiswa</a>
+                        </li>
+                        <li x-data="{open: false}" class="" @mouseover="open = true" @mouseover.away="open = false">
+                            <div class="relative ">
+                                <button
+                                    class="text-md font-semibold hover:text-slate-100 text-slate-300 flex items-center justify-center gap-2">Kegiatan
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20"
+                                        fill="currentColor">
+                                        <path fill-rule="evenodd"
+                                            d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                            clip-rule="evenodd" />
+                                    </svg>
+                                </button>
+                                <div class="origin-top-left absolute top-6 right-0 w-36 " x-show="open" x-cloak>
+                                    <div class="h-3 bg-transparent">
+                                    </div>
+                                    <div
+                                        class="rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none">
+                                        <a href="/upcoming-events"
+                                            class="text-gray-700 hover:text-blue-800 block px-4 py-2 text-sm">Upcoming
+                                            Events</a>
+                                        <a href="/press-release"
+                                            class="text-gray-700 hover:text-blue-800 block px-4 py-2 text-sm">Press
+                                            Release</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!-- button mobile black -->
+                <div class="block md:hidden">
+                    <button @click="open = !open" class="flex items-center justify-center text-white p-2 rounded-full">
+                        <svg class="fill-current h-6 w-6" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <title>Menu</title>
+                            <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+                        </svg>
+                    </button>
+
+
+                </div>
+
+            </nav>
+        </header>
+        <div x-show="open" @click.outside="open = !open" class="w-full bg-blue-700 shadow-md p-5">
+            <ul class="text-lg">
+                <li class="flex">
+                    <a href="p"
+                        class="w-full py-2 px-2  text-sm font-semibold hover:text-slate-100 text-slate-200 capitalize">Beranda</a>
+                </li>
+                <li class="flex flex-col text-slate-100" x-data="{ open : false}">
+                    <button href="" @click="open = !open"
+                        class="w-full text-left py-2 px-2  text-sm font-semibold hover:text-slate-100 text-slate-200 capitalize">Profil
+                        Jurusan</button>
+                    <div x-show="open" class="flex flex-col">
+                        <a href="/upcoming-events" class="hover:text-blue-800 block px-4 py-2 text-sm">Sambutan
+                            Ketua Jurusan</a>
+                        <a href="/press-release" class=" hover:text-blue-800 block px-4 py-2 text-sm">Sejarah
+                            dan Visi Misi Jurusan</a>
+                        <a href="/press-release" class=" hover:text-blue-800 block px-4 py-2 text-sm">Profil
+                            Dosen</a>
+                        <a href="/press-release" class=" hover:text-blue-800 block px-4 py-2 text-sm">Kurikulum</a>
+                    </div>
+                </li>
+                <li class="flex">
+                    <a href=""
+                        class="w-full py-2 px-2  text-sm font-semibold hover:text-slate-100 text-slate-200 capitalize">Profil
+                        HIMIP</a>
+                </li>
+                <li class="" x-data="{open : false}">
+                    <button @click="open = !open"
+                        class="w-full py-2 px-2  text-left text-sm font-semibold hover:text-slate-100 text-slate-200 capitalize">kegiatan</button>
+                    <div class="" x-show="open" x-cloak>
+                        <div class="">
+                            <a href="/upcoming-events"
+                                class="text-gray-700 hover:text-blue-800 block px-4 py-2 text-sm">Upcoming Events</a>
+                            <a href="/press-release"
+                                class="text-gray-700 hover:text-blue-800 block px-4 py-2 text-sm">Press
+                                Release</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- Navigation Bar End -->
+
+    <!-- Main Content -->
+
+
+    <!-- struktur himip -->
+    <div class="container mx-auto py-10 flex flex-col space-y-5">
+        <h2 class="text-3xl font-bold w-full text-center">Struktur Organisasi</h2>
+        <h2 class="text-2xl font-bold w-full text-center pt-16">BPH Inti</h2>
+        <div class="md:text-left grid grid-cols-1 md:grid-cols-3 md:gap-10">
+            <div class="space-y-3 py-5">
+                <img src="https://source.unsplash.com/random" alt="" class="h-60 w-full">
+                <p class="text-center font-bold text-2xl">Jabatan</p>
+                <p class="text-xl font-bold text-center">Nama</p>
+                <p class="text-center">Prodi Angkatan</p>
+            </div>
+            <div class="space-y-3 py-5">
+                <img src="https://source.unsplash.com/random" alt="" class="h-60 w-full">
+                <p class="text-center font-bold text-2xl">Jabatan</p>
+                <p class="text-xl font-bold text-center">Nama</p>
+                <p class="text-center">Prodi Angkatan</p>
+            </div>
+            <div class="space-y-3 py-5">
+                <img src="https://source.unsplash.com/random" alt="" class="h-60 w-full">
+                <p class="text-center font-bold text-2xl">Jabatan</p>
+                <p class="text-xl font-bold text-center">Nama</p>
+                <p class="text-center">Prodi Angkatan</p>
+            </div>
+        </div>
+        <h2 class="text-2xl font-bold w-full text-center pt-16">Dinas Kaderisasi</h2>
+        <div class="md:text-left grid grid-cols-1 md:grid-cols-3 md:gap-10">
+            <div class="space-y-3 py-5">
+                <img src="https://source.unsplash.com/random" alt="" class="h-60 w-full">
+                <p class="text-center font-bold text-2xl">Jabatan</p>
+                <p class="text-xl font-bold text-center">Nama</p>
+                <p class="text-center">Prodi Angkatan</p>
+            </div>
+            <div class="space-y-3 py-5">
+                <img src="https://source.unsplash.com/random" alt="" class="h-60 w-full">
+                <p class="text-center font-bold text-2xl">Jabatan</p>
+                <p class="text-xl font-bold text-center">Nama</p>
+                <p class="text-center">Prodi Angkatan</p>
+            </div>
+            <div class="space-y-3 py-5">
+                <img src="https://source.unsplash.com/random" alt="" class="h-60 w-full">
+                <p class="text-center font-bold text-2xl">Jabatan</p>
+                <p class="text-xl font-bold text-center">Nama</p>
+                <p class="text-center">Prodi Angkatan</p>
+            </div>
+        </div>
+        <h2 class="text-2xl font-bold w-full text-center pt-16">Dinas Sosial dan Politik</h2>
+        <div class="md:text-left grid grid-cols-1 md:grid-cols-3 md:gap-10">
+            <div class="space-y-3 py-5">
+                <img src="https://source.unsplash.com/random" alt="" class="h-60 w-full">
+                <p class="text-center font-bold text-2xl">Jabatan</p>
+                <p class="text-xl font-bold text-center">Nama</p>
+                <p class="text-center">Prodi Angkatan</p>
+            </div>
+            <div class="space-y-3 py-5">
+                <img src="https://source.unsplash.com/random" alt="" class="h-60 w-full">
+                <p class="text-center font-bold text-2xl">Jabatan</p>
+                <p class="text-xl font-bold text-center">Nama</p>
+                <p class="text-center">Prodi Angkatan</p>
+            </div>
+            <div class="space-y-3 py-5">
+                <img src="https://source.unsplash.com/random" alt="" class="h-60 w-full">
+                <p class="text-center font-bold text-2xl">Jabatan</p>
+                <p class="text-xl font-bold text-center">Nama</p>
+                <p class="text-center">Prodi Angkatan</p>
+            </div>
+        </div>
+        <h2 class="text-2xl font-bold w-full text-center pt-16">Forum Sosial dan Politik</h2>
+        <div class="md:text-left grid grid-cols-1 md:grid-cols-3 md:gap-10">
+            <div class="space-y-3 py-5">
+                <img src="https://source.unsplash.com/random" alt="" class="h-60 w-full">
+                <p class="text-center font-bold text-2xl">Jabatan</p>
+                <p class="text-xl font-bold text-center">Nama</p>
+                <p class="text-center">Prodi Angkatan</p>
+            </div>
+            <div class="space-y-3 py-5">
+                <img src="https://source.unsplash.com/random" alt="" class="h-60 w-full">
+                <p class="text-center font-bold text-2xl">Jabatan</p>
+                <p class="text-xl font-bold text-center">Nama</p>
+                <p class="text-center">Prodi Angkatan</p>
+            </div>
+            <div class="space-y-3 py-5">
+                <img src="https://source.unsplash.com/random" alt="" class="h-60 w-full">
+                <p class="text-center font-bold text-2xl">Jabatan</p>
+                <p class="text-xl font-bold text-center">Nama</p>
+                <p class="text-center">Prodi Angkatan</p>
+            </div>
+        </div>
+        <h2 class="text-2xl font-bold w-full text-center pt-16">Dinas Seni dan Olahraga</h2>
+        <div class="md:text-left grid grid-cols-1 md:grid-cols-3 md:gap-10">
+            <div class="space-y-3 py-5">
+                <img src="https://source.unsplash.com/random" alt="" class="h-60 w-full">
+                <p class="text-center font-bold text-2xl">Jabatan</p>
+                <p class="text-xl font-bold text-center">Nama</p>
+                <p class="text-center">Prodi Angkatan</p>
+            </div>
+            <div class="space-y-3 py-5">
+                <img src="https://source.unsplash.com/random" alt="" class="h-60 w-full">
+                <p class="text-center font-bold text-2xl">Jabatan</p>
+                <p class="text-xl font-bold text-center">Nama</p>
+                <p class="text-center">Prodi Angkatan</p>
+            </div>
+            <div class="space-y-3 py-5">
+                <img src="https://source.unsplash.com/random" alt="" class="h-60 w-full">
+                <p class="text-center font-bold text-2xl">Jabatan</p>
+                <p class="text-xl font-bold text-center">Nama</p>
+                <p class="text-center">Prodi Angkatan</p>
+            </div>
+        </div>
+        <h2 class="text-2xl font-bold w-full text-center pt-16">Komunitas Ilmu Pemerintahan Anak Seni</h2>
+        <div class="md:text-left grid grid-cols-1 md:grid-cols-3 md:gap-10">
+            <div class="space-y-3 py-5">
+                <img src="https://source.unsplash.com/random" alt="" class="h-60 w-full">
+                <p class="text-center font-bold text-2xl">Jabatan</p>
+                <p class="text-xl font-bold text-center">Nama</p>
+                <p class="text-center">Prodi Angkatan</p>
+            </div>
+            <div class="space-y-3 py-5">
+                <img src="https://source.unsplash.com/random" alt="" class="h-60 w-full">
+                <p class="text-center font-bold text-2xl">Jabatan</p>
+                <p class="text-xl font-bold text-center">Nama</p>
+                <p class="text-center">Prodi Angkatan</p>
+            </div>
+            <div class="space-y-3 py-5">
+                <img src="https://source.unsplash.com/random" alt="" class="h-60 w-full">
+                <p class="text-center font-bold text-2xl">Jabatan</p>
+                <p class="text-xl font-bold text-center">Nama</p>
+                <p class="text-center">Prodi Angkatan</p>
+            </div>
+        </div>
+        <h2 class="text-2xl font-bold w-full text-center pt-16">Dinas Advokasi dan Kesejahteraan Mahasiswa</h2>
+        <div class="md:text-left grid grid-cols-1 md:grid-cols-3 md:gap-10">
+            <div class="space-y-3 py-5">
+                <img src="https://source.unsplash.com/random" alt="" class="h-60 w-full">
+                <p class="text-center font-bold text-2xl">Jabatan</p>
+                <p class="text-xl font-bold text-center">Nama</p>
+                <p class="text-center">Prodi Angkatan</p>
+            </div>
+            <div class="space-y-3 py-5">
+                <img src="https://source.unsplash.com/random" alt="" class="h-60 w-full">
+                <p class="text-center font-bold text-2xl">Jabatan</p>
+                <p class="text-xl font-bold text-center">Nama</p>
+                <p class="text-center">Prodi Angkatan</p>
+            </div>
+            <div class="space-y-3 py-5">
+                <img src="https://source.unsplash.com/random" alt="" class="h-60 w-full">
+                <p class="text-center font-bold text-2xl">Jabatan</p>
+                <p class="text-xl font-bold text-center">Nama</p>
+                <p class="text-center">Prodi Angkatan</p>
+            </div>
+        </div>
+        <h2 class="text-2xl font-bold w-full text-center pt-16">Dinas Penelitian dan Pengembangan</h2>
+        <div class="md:text-left grid grid-cols-1 md:grid-cols-3 md:gap-10">
+            <div class="space-y-3 py-5">
+                <img src="https://source.unsplash.com/random" alt="" class="h-60 w-full">
+                <p class="text-center font-bold text-2xl">Jabatan</p>
+                <p class="text-xl font-bold text-center">Nama</p>
+                <p class="text-center">Prodi Angkatan</p>
+            </div>
+            <div class="space-y-3 py-5">
+                <img src="https://source.unsplash.com/random" alt="" class="h-60 w-full">
+                <p class="text-center font-bold text-2xl">Jabatan</p>
+                <p class="text-xl font-bold text-center">Nama</p>
+                <p class="text-center">Prodi Angkatan</p>
+            </div>
+            <div class="space-y-3 py-5">
+                <img src="https://source.unsplash.com/random" alt="" class="h-60 w-full">
+                <p class="text-center font-bold text-2xl">Jabatan</p>
+                <p class="text-xl font-bold text-center">Nama</p>
+                <p class="text-center">Prodi Angkatan</p>
+            </div>
+        </div>
+        <h2 class="text-2xl font-bold w-full text-center pt-16">Dinas Komunikasi dan Informasi</h2>
+        <div class="md:text-left grid grid-cols-1 md:grid-cols-3 md:gap-10">
+            <div class="space-y-3 py-5">
+                <img src="https://source.unsplash.com/random" alt="" class="h-60 w-full">
+                <p class="text-center font-bold text-2xl">Jabatan</p>
+                <p class="text-xl font-bold text-center">Nama</p>
+                <p class="text-center">Prodi Angkatan</p>
+            </div>
+            <div class="space-y-3 py-5">
+                <img src="https://source.unsplash.com/random" alt="" class="h-60 w-full">
+                <p class="text-center font-bold text-2xl">Jabatan</p>
+                <p class="text-xl font-bold text-center">Nama</p>
+                <p class="text-center">Prodi Angkatan</p>
+            </div>
+            <div class="space-y-3 py-5">
+                <img src="https://source.unsplash.com/random" alt="" class="h-60 w-full">
+                <p class="text-center font-bold text-2xl">Jabatan</p>
+                <p class="text-xl font-bold text-center">Nama</p>
+                <p class="text-center">Prodi Angkatan</p>
+            </div>
+        </div>
+        <h2 class="text-2xl font-bold w-full text-center pt-16">Dinas Kewirausahaan</h2>
+        <div class="md:text-left grid grid-cols-1 md:grid-cols-3 md:gap-10">
+            <div class="space-y-3 py-5">
+                <img src="https://source.unsplash.com/random" alt="" class="h-60 w-full">
+                <p class="text-center font-bold text-2xl">Jabatan</p>
+                <p class="text-xl font-bold text-center">Nama</p>
+                <p class="text-center">Prodi Angkatan</p>
+            </div>
+            <div class="space-y-3 py-5">
+                <img src="https://source.unsplash.com/random" alt="" class="h-60 w-full">
+                <p class="text-center font-bold text-2xl">Jabatan</p>
+                <p class="text-xl font-bold text-center">Nama</p>
+                <p class="text-center">Prodi Angkatan</p>
+            </div>
+            <div class="space-y-3 py-5">
+                <img src="https://source.unsplash.com/random" alt="" class="h-60 w-full">
+                <p class="text-center font-bold text-2xl">Jabatan</p>
+                <p class="text-xl font-bold text-center">Nama</p>
+                <p class="text-center">Prodi Angkatan</p>
+            </div>
+        </div>
+        <h2 class="text-2xl font-bold w-full text-center pt-16">Dinas Keagamaan</h2>
+        <div class="md:text-left grid grid-cols-1 md:grid-cols-3 md:gap-10">
+            <div class="space-y-3 py-5">
+                <img src="https://source.unsplash.com/random" alt="" class="h-60 w-full">
+                <p class="text-center font-bold text-2xl">Jabatan</p>
+                <p class="text-xl font-bold text-center">Nama</p>
+                <p class="text-center">Prodi Angkatan</p>
+            </div>
+            <div class="space-y-3 py-5">
+                <img src="https://source.unsplash.com/random" alt="" class="h-60 w-full">
+                <p class="text-center font-bold text-2xl">Jabatan</p>
+                <p class="text-xl font-bold text-center">Nama</p>
+                <p class="text-center">Prodi Angkatan</p>
+            </div>
+            <div class="space-y-3 py-5">
+                <img src="https://source.unsplash.com/random" alt="" class="h-60 w-full">
+                <p class="text-center font-bold text-2xl">Jabatan</p>
+                <p class="text-xl font-bold text-center">Nama</p>
+                <p class="text-center">Prodi Angkatan</p>
+            </div>
+        </div>
+        
+    </div>
+    <!-- visi misi himip end -->
+
+
+    <!-- Main Content End -->
+
+    <!-- Footer -->
+
+    <footer class="body-font bg-slate-900 text-white">
+        <div class="container px-5 py-8 mx-auto flex justify-between sm:flex-row flex-col">
+
+            <p class="text-sm text-gray-500 sm:py-2 sm:mt-0 mt-4">©
+                2022 HIMIP UNRI
+            </p>
+            <p class="text-sm text-gray-500 sm:py-2 sm:mt-0 mt-4">
+                <a href="beetcodestudio.github.io">POWERED BY BEETCODESTUDIO</a>
+            </p>
+            <!-- <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
+                <a class="text-gray-500">
+                    <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        class="w-8 h-8" viewBox="0 0 24 24">
+                        <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                    </svg>
+                </a>
+                <a class="ml-3 text-gray-500">
+                    <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        class="w-8 h-8" viewBox="0 0 24 24">
+                        <path
+                            d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z">
+                        </path>
+                    </svg>
+                </a>
+                <a class="ml-3 text-gray-500">
+                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                        stroke-width="2" class="w-8 h-8" viewBox="0 0 24 24">
+                        <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                        <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+                    </svg>
+                </a>
+                <a class="ml-3 text-gray-500">
+                    <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                        stroke-width="0" class="w-8 h-8" viewBox="0 0 24 24">
+                        <path stroke="none"
+                            d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z">
+                        </path>
+                        <circle cx="4" cy="4" r="2" stroke="none"></circle>
+                    </svg>
+                </a>
+            </span> -->
+        </div>
+    </footer>
+    <!-- Footer End -->
+
+
+</body>
+
+</html>

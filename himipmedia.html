@@ -12,7 +12,7 @@
 
 </head>
 
-<body class="antialiased bg-blue-300 text-black">
+<body class="antialiased bg-blue-300 text-slate-800">
 
     <!-- Navigation Bar -->
     <div class="fixed w-full top-0 z-10 shadow-2xl" x-data="{open : false, showBar : false}"
@@ -20,29 +20,98 @@
         @scroll.window="showBar = (window.pageYOffset > 20) ? true : false">
         <header class="container mx-auto">
             <nav class="px-5 py-3 flex justify-between items-center content-center ">
-                <div class="flex gap-3">
-                    <img src="LOGOUNRI.png" class="h-8 w-full" alt="">
-                    <img src="LOGOHIMIP.png" class="h-8 w-full" alt="">
-                    <img src="LogoKabinet.png" class="h-8 w-full" alt="">
-                </div>
+                <a href="/himipmedia.html" class="flex gap-3">
+                    <img src="AllLogo.png" class="h-10 w-full" alt="">
+                </a>
                 <div class="hidden md:block">
                     <ul class="flex space-x-7">
                         <li>
                             <a href="" class="text-md font-semibold hover:text-slate-100 text-slate-300">Home</a>
                         </li>
-                        <li>
-                            <a href="" class="text-md font-semibold hover:text-slate-100 text-slate-300">Kabinet</a>
-                        </li>
-                        <li>
-                            <a href="" class="text-md font-semibold hover:text-slate-100 text-slate-300">Beasiswa</a>
-                        </li>
-                        <li x-data="{open: false}" class="">
+
+                        <li x-data="{open: false}" class="" @mouseover="open = true" @mouseover.away="open = false">
                             <div class="relative ">
                                 <button @click="open = !open"
-                                    class="text-md font-semibold hover:text-slate-100 text-slate-300">Kegiatan</button>
-                                <div class="origin-top-left absolute top-10 right-0 w-24 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none"
-                                    x-show="open" x-cloak>
-                                    <div class="">
+                                    class="text-md font-semibold hover:text-slate-100 text-slate-300 flex gap-2 justify-center items-center">Profil
+                                    Jurusan<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20"
+                                        fill="currentColor">
+                                        <path fill-rule="evenodd"
+                                            d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                            clip-rule="evenodd" />
+                                    </svg></button>
+                                <div class="origin-top-left absolute top-6 left-0 w-40 " x-show="open" x-cloak>
+                                    <div class="h-3 bg-transparent">
+                                    </div>
+                                    <div
+                                        class="rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none">
+                                        <a href="/upcoming-events"
+                                            class="text-gray-700 hover:text-blue-800 block px-4 py-2 text-sm">Sambutan
+                                            Ketua Jurusan</a>
+                                        <a href="/visi-misi-jurusan.html"
+                                            class="text-gray-700 hover:text-blue-800 block px-4 py-2 text-sm">Sejarah
+                                            dan Visi Misi Jurusan</a>
+                                        <a href="/press-release"
+                                            class="text-gray-700 hover:text-blue-800 block px-4 py-2 text-sm">Profil
+                                            Dosen</a>
+                                        <a href="/press-release"
+                                            class="text-gray-700 hover:text-blue-800 block px-4 py-2 text-sm">Kurikulum</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li x-data="{open: false}" class="" @mouseover="open = true" @mouseover.away="open = false">
+                            <div class="relative ">
+                                <button @click="open = !open"
+                                    class="text-md font-semibold hover:text-slate-100 text-slate-300 flex gap-2 justify-center items-center">Profil
+                                    HIMIP
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20"
+                                        fill="currentColor">
+                                        <path fill-rule="evenodd"
+                                            d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                            clip-rule="evenodd" />
+                                    </svg>
+                                </button>
+                                <div class="origin-top-left absolute top-6 left-0 w-40" x-show="open" x-cloak>
+                                    <div class="h-3 bg-transparent">
+                                    </div>
+                                    <div
+                                        class=" rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none">
+                                        <a href="/sambutan.html"
+                                            class="text-gray-700 hover:text-blue-800 block px-4 py-2 text-sm">Sambutan
+                                            Bupati HIMIP</a>
+                                        <a href="/visi-misi.html"
+                                            class="text-gray-700 hover:text-blue-800 block px-4 py-2 text-sm">Visi
+                                            Misi</a>
+                                        <a href="/press-release"
+                                            class="text-gray-700 hover:text-blue-800 block px-4 py-2 text-sm">Struktur
+                                            HIMIP</a>
+                                        <a href="/press-release"
+                                            class="text-gray-700 hover:text-blue-800 block px-4 py-2 text-sm">Leadership
+                                            Insight</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="" class="text-md font-semibold hover:text-slate-100 text-slate-300">Dinding Kreatif
+                                Mahasiswa</a>
+                        </li>
+                        <li x-data="{open: false}" class="" @mouseover="open = true" @mouseover.away="open = false">
+                            <div class="relative ">
+                                <button
+                                    class="text-md font-semibold hover:text-slate-100 text-slate-300 flex items-center justify-center gap-2">Kegiatan
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20"
+                                        fill="currentColor">
+                                        <path fill-rule="evenodd"
+                                            d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                            clip-rule="evenodd" />
+                                    </svg>
+                                </button>
+                                <div class="origin-top-left absolute top-6 right-0 w-36 " x-show="open" x-cloak>
+                                    <div class="h-3 bg-transparent">
+                                    </div>
+                                    <div
+                                        class="rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none">
                                         <a href="/upcoming-events"
                                             class="text-gray-700 hover:text-blue-800 block px-4 py-2 text-sm">Upcoming
                                             Events</a>
@@ -69,23 +138,34 @@
 
             </nav>
         </header>
-        <div x-show="open" @click.outside="open = !open" class="w-full bg-blue-700 shadow-md px-10 py-5">
-            <ul class="text-lg space-y-3">
+        <div x-show="open" @click.outside="open = !open" class="w-full bg-blue-700 shadow-md p-5">
+            <ul class="text-lg">
                 <li class="flex">
-                    <a href=""
-                        class="w-full py-2 px-2 bg-white/20 text-sm font-semibold hover:text-slate-100 text-slate-200 capitalize">Beranda</a>
+                    <a href="p"
+                        class="w-full py-2 px-2  text-sm font-semibold hover:text-slate-100 text-slate-200 capitalize">Beranda</a>
+                </li>
+                <li class="flex flex-col text-slate-100" x-data="{ open : false}">
+                    <button href="" @click="open = !open"
+                        class="w-full text-left py-2 px-2  text-sm font-semibold hover:text-slate-100 text-slate-200 capitalize">Profil
+                        Jurusan</button>
+                    <div x-show="open" class="flex flex-col">
+                        <a href="/upcoming-events" class="hover:text-blue-800 block px-4 py-2 text-sm">Sambutan
+                            Ketua Jurusan</a>
+                        <a href="/press-release" class=" hover:text-blue-800 block px-4 py-2 text-sm">Sejarah
+                            dan Visi Misi Jurusan</a>
+                        <a href="/press-release" class=" hover:text-blue-800 block px-4 py-2 text-sm">Profil
+                            Dosen</a>
+                        <a href="/press-release" class=" hover:text-blue-800 block px-4 py-2 text-sm">Kurikulum</a>
+                    </div>
                 </li>
                 <li class="flex">
                     <a href=""
-                        class="w-full py-2 px-2 bg-white/20 text-sm font-semibold hover:text-slate-100 text-slate-200 capitalize">Kabinet</a>
-                </li>
-                <li class="flex">
-                    <a href=""
-                        class="w-full py-2 px-2 bg-white/20 text-sm font-semibold hover:text-slate-100 text-slate-200 capitalize">Beasiswa</a>
+                        class="w-full py-2 px-2  text-sm font-semibold hover:text-slate-100 text-slate-200 capitalize">Profil
+                        HIMIP</a>
                 </li>
                 <li class="" x-data="{open : false}">
                     <button @click="open = !open"
-                        class="w-full py-2 px-2 bg-white/20 text-left text-sm font-semibold hover:text-slate-100 text-slate-200 capitalize">kegiatan</button>
+                        class="w-full py-2 px-2  text-left text-sm font-semibold hover:text-slate-100 text-slate-200 capitalize">kegiatan</button>
                     <div class="" x-show="open" x-cloak>
                         <div class="">
                             <a href="/upcoming-events"
@@ -103,7 +183,7 @@
 
     <!-- Main Content -->
     <!-- foto pengurus -->
-    <div class="h-[40rem] bg-cover" style="background-image: url('himipcandradimuka.jpg');">
+    <div class="h-[40rem] bg-cover bg-center" style="background-image: url('himipcandradimuka.jpg');">
         <div
             class="absolute top-0 left-0 h-[40rem] w-full flex flex-col items-center justify-center space-y-3 text-white text-center bg-slate-600/80">
             <p class="text-5xl font-extrabold">HIMIP UNRI 2022</p>
@@ -113,19 +193,18 @@
     <!-- foto pengurus end -->
 
     <!-- about himip -->
-    <div class="container mx-auto py-20 flex flex-col">
+    <div class="container mx-auto py-10 flex flex-col">
         <div class="grid grid-cols-1 md:grid-cols-2">
             <div
                 class="space-y-5 text-center md:text-left order-3 md:order-2 items-center justify-center flex flex-col">
                 <!-- <p class="text-xl uppercase font-semibold text-blue-900">HIMIPCANDRADIMUKA</p> -->
-                <h2 class="text-5xl font-bold w-full">About</h2>
                 <h2 class="text-5xl font-bold w-full">HIMIP Candradimuka</h2>
-                <p class="text-slate-600 md:p-0 p-3">Himip Fisip Unri merupakan organisasi Himpunan Mahasiswa Ilmu
+                <p class="text-slate-600 md:p-0 p-3">HIMIP FISIP UNRI merupakan organisasi Himpunan Mahasiswa Ilmu
                     Pemerintahan yang dibentuk dengan tujuan untuk menjadi wadah pengembangan diri mahasiswa dalam
                     berorganisasi serta berlandaskan kepada asas kekeluargaan.
 
                 </p>
-                <p class="text-slate-600 md:p-0 p-3"> Himip Fisip Unri menjadi pelopor pembentukan karakter dan
+                <p class="text-slate-600 md:p-0 p-3"> HIMIP FISIP UNRI menjadi pelopor pembentukan karakter dan
                     kemampuan mahasiswa Ilmu Pemerintahan dalam bidang intelektual, sosial, dan ketaqwaan, sehingga
                     mampu memberikan kontribusi bagi universitas dan masyarakat.
 
@@ -134,7 +213,7 @@
             </div>
             <div class="p-10 order-2">
                 <div class=" w-full h-full flex justify-center items-center">
-                    <img src="LogoKabinet.png" alt="">
+                    <img src="LogoCandradimuka.png" alt="" class="bg-auto bg-center">
                 </div>
             </div>
         </div>
@@ -169,47 +248,47 @@
                     <p>
                         "Menumbuhkan semangat jurnalis yang akurat dan anti hoax"
                     </p>
-                        <li>
-                            🗓️ Hari/ tanggal : Minggu/ 20 Maret 2022
-                        </li>
-                        <li>
-                            🕘 Waktu : 09.00 WIB s.d. Selesai
-                        </li>
-                        <li>
-                            🌐 Tempat : Via Zoom Cloud Meeting
-                        </li>
-                        <li>
-                            🗣️ Pemateri : Febrina Wulandari
-                        </li>
+                    <li>
+                        🗓️ Hari/ tanggal : Minggu/ 20 Maret 2022
+                    </li>
+                    <li>
+                        🕘 Waktu : 09.00 WIB s.d. Selesai
+                    </li>
+                    <li>
+                        🌐 Tempat : Via Zoom Cloud Meeting
+                    </li>
+                    <li>
+                        🗣️ Pemateri : Febrina Wulandari
+                    </li>
                 </ul>
                 <a href=""
-                class="text-slate-200 hover:text-blue-900 inline-flex justify-center md:justify-start items-center">Read
-                More
-                <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M5 12h14"></path>
-                    <path d="M12 5l7 7-7 7"></path>
-                </svg>
-            </a>
-            <div class="text-center mt-2 leading-none flex justify-center w-full py-4">
-                <span
-                    class="text-gray-100 mr-3 inline-flex items-center leading-none text-sm pr-3 py-1 border-r-2 border-gray-200">
+                    class="text-slate-200 hover:text-blue-900 inline-flex justify-center md:justify-start items-center">Read
+                    More
+                    <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M5 12h14"></path>
+                        <path d="M12 5l7 7-7 7"></path>
+                    </svg>
+                </a>
+                <div class="text-center mt-2 leading-none flex justify-center w-full py-4">
+                    <span
+                        class="text-gray-100 mr-3 inline-flex items-center leading-none text-sm pr-3 py-1 border-r-2 border-gray-200">
 
-                    <svg class="w-4 h-4 mr-1" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
-                        viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                        <path stroke-linecap="round" stroke-linejoin="round"
-                            d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                    </svg>Maret 12, 2022
-                </span>
-                <span class="text-gray-100 inline-flex items-center leading-none text-sm">
-                    <svg class="w-4 h-4 mr-1" stroke="currentColor" stroke-width="2" fill="none"
-                        stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
-                        <path
-                            d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z">
-                        </path>
-                    </svg>6
-                </span>
-            </div>
+                        <svg class="w-4 h-4 mr-1" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                        </svg>Maret 12, 2022
+                    </span>
+                    <span class="text-gray-100 inline-flex items-center leading-none text-sm">
+                        <svg class="w-4 h-4 mr-1" stroke="currentColor" stroke-width="2" fill="none"
+                            stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                            <path
+                                d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z">
+                            </path>
+                        </svg>6
+                    </span>
+                </div>
 
             </div>
         </div>
